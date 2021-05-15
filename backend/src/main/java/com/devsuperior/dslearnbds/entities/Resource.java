@@ -17,13 +17,13 @@ import com.devsuperior.dslearnbds.entities.enums.ResourceType;
 
 @Entity
 @Table(name = "tb_resource")
-public class Resource implements Serializable{
+public class Resource implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String tittle;
+	private String title;
 	private String description;
 	private Integer position;
 	private String imgUri;
@@ -32,18 +32,18 @@ public class Resource implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "offer_id")
 	private Offer offer;
-	
+
 	@OneToMany(mappedBy = "resource")
 	private List<Section> sections = new ArrayList<>();
 	
 	public Resource() {
 	}
 
-	public Resource(Long id, String tittle, String description, Integer position, String imgUri, ResourceType type,
+	public Resource(Long id, String title, String description, Integer position, String imgUri, ResourceType type,
 			Offer offer) {
 		super();
 		this.id = id;
-		this.tittle = tittle;
+		this.title = title;
 		this.description = description;
 		this.position = position;
 		this.imgUri = imgUri;
@@ -59,12 +59,12 @@ public class Resource implements Serializable{
 		this.id = id;
 	}
 
-	public String getTittle() {
-		return tittle;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTittle(String tittle) {
-		this.tittle = tittle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getDescription() {

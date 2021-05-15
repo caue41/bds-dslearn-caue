@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_course")
-public class Course implements Serializable{
+public class Course implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -30,6 +30,7 @@ public class Course implements Serializable{
 	}
 
 	public Course(Long id, String name, String imgUri, String imgGrayUri) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.imgUri = imgUri;

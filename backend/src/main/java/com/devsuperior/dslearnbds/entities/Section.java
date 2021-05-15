@@ -12,13 +12,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_section")
-public class Section implements Serializable{
+public class Section implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String tittle;
+	private String title;
 	private String description;
 	private Integer position;
 	private String imgUri;
@@ -34,11 +34,11 @@ public class Section implements Serializable{
 	public Section() {
 	}
 
-	public Section(Long id, String tittle, String description, Integer position, String imgUri, Resource resource,
+	public Section(Long id, String title, String description, Integer position, String imgUri, Resource resource,
 			Section prerequisite) {
 		super();
 		this.id = id;
-		this.tittle = tittle;
+		this.title = title;
 		this.description = description;
 		this.position = position;
 		this.imgUri = imgUri;
@@ -54,12 +54,12 @@ public class Section implements Serializable{
 		this.id = id;
 	}
 
-	public String getTittle() {
-		return tittle;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTittle(String tittle) {
-		this.tittle = tittle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getDescription() {
@@ -126,5 +126,4 @@ public class Section implements Serializable{
 			return false;
 		return true;
 	}
-	
 }

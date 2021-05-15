@@ -14,8 +14,8 @@ public class Content extends Lesson {
 	public Content() {
 	}
 
-	public Content(Long id, String tittle, Integer position, Section section, String textContent, String videoUri) {
-		super(id, tittle, position, section);
+	public Content(Long id, String title, Integer position, Section section, String textContent, String videoUri) {
+		super(id, title, position, section);
 		this.textContent = textContent;
 		this.videoUri = videoUri;
 	}
